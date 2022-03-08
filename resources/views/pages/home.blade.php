@@ -15,20 +15,28 @@
               </tr>
             </thead>
             <tbody>
+                @if($students !== null)
                 @foreach($students as $item => $student)
-              <tr>
-                <th scope="row">{{$item + 1}}</th>
-                <td>{{ $student-> msv}}</td>
-                <td>{{ $student-> name}}</td>
-                <td>{{ $student-> birth}}</td>
-                <td>{{ $student-> address}}</td>
-                <td>{{ $student-> class}}</td>
-                <td>
-                    <button class="btn btn-outline-warning">Sửa</button>
-                    <button class="btn btn-outline-danger">Xóa</button>
-                </td>
-              </tr>
-              @endforeach
+                <tr>
+                    <th scope="row">{{$item + 1}}</th>
+                    <td>{{ $student-> msv}}</td>
+                    <td>{{ $student-> name}}</td>
+                    <td>{{ $student-> birth}}</td>
+                    <td>{{ $student-> address}}</td>
+                    <td>{{ $student-> class}}</td>
+                    <td>
+                        <button class="btn btn-outline-warning">Sửa</button>
+                        <button class="btn btn-outline-danger">Xóa</button>
+                    </td>
+                  </tr>
+                  @endforeach
+                @else
+                <h1> Không tìm thấy dữ liệu</h1>
+                
+                @endif
+                
+             
+              
             </tbody>
           </table>
     </div>
