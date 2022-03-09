@@ -1,7 +1,7 @@
 @extends('master')
 @section('content')
     <div class="container">
-        <h1 class="text-center m-4">Danh sách sinh viên nhóm 2</h1>
+        <h1 class="text-center m-4">Danh sách sinh viên ICTU</h1>
         <table class="table">
             <thead>
               <tr>
